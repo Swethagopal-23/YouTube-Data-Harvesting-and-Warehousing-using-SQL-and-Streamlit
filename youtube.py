@@ -37,7 +37,7 @@ def fetch_channel_data(channel_id):
 
 # Function to insert fetched channel data into MySQL database
 def insert_channel_data(channel_ids):
-    mydb = mysql.connector.connect(host="localhost", user="root", password="12345678", database="youtube")
+    mydb = mysql.connector.connect(host="localhost", user="root", password="your_password", database="your_db_name")
     mycursor = mydb.cursor()
 
     insert_query = '''
@@ -138,7 +138,7 @@ def fetch_video_data(video_ids):
 
 # Function to insert fetched video data into MySQL database
 def insert_video_data(video_ids):
-    mydb = mysql.connector.connect(host="localhost", user="root", password="12345678", database="youtube")
+    mydb = mysql.connector.connect(host="localhost", user="root", password="your_password", database="your_db_name")
     mycursor = mydb.cursor()
 
     insert_query = '''
@@ -218,7 +218,7 @@ def fetch_comment_data(video_ids):
 
 # Function to insert fetched comment data into MySQL database
 def insert_comment_data(comment_data):
-    mydb = mysql.connector.connect(host="localhost", user="root", password="12345678", database="youtube")
+    mydb = mysql.connector.connect(host="localhost", user="root", password="your_password", database="your_db_name")
     mycursor = mydb.cursor()
 
     insert_query = '''
@@ -281,7 +281,7 @@ if st.button('Fetch and Store Comment Data'):
         st.write("No valid channel IDs provided.")
 
 # Establish a connection to the database
-mydb = mysql.connector.connect(host="localhost", user="root", password="12345678", database="youtube")
+mydb = mysql.connector.connect(host="localhost", user="root", password="your_password", database="your_db_name")
 
 # Create a cursor object
 cursor = mydb.cursor()
@@ -337,7 +337,7 @@ if st.sidebar.button("Show Comment Data"):
     st.sidebar.write(f"Comment Author: {comment_data[3]}")
    
 # Establish a connection to the database
-mydb = mysql.connector.connect(host="localhost", user="root", password="12345678", database="youtube")
+mydb = mysql.connector.connect(host="localhost", user="root", password="your_password", database="your_db_name")
 
 # Create a cursor object
 cursor = mydb.cursor()
