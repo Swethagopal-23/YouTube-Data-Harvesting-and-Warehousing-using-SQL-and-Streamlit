@@ -10,7 +10,7 @@ import isodate
 # Defining API key
 api_service_name = "youtube"
 api_version = "v3"
-api_key='AIzaSyDGa0x4HzzXaCzLt3ZJKFlnicicvBn7KS0'
+api_key=' '#your api key
 youtube = googleapiclient.discovery.build(api_service_name, api_version, developerKey=api_key)
 
 # Function to fetch channel details and convert to DataFrame
